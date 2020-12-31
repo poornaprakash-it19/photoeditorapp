@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.video_editor.photoeditorapp1">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.video_editor.photoeditorapp1.ActivityNoInternet.ActivityNoInternet"></activity>
+        <activity android:name="com.video_editor.photoeditorapp1.ActivitySplash.ActivitySplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.video_editor.photoeditorapp1.ActivityMain.ActivityMain" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.video_editor.photoeditorapp1.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoList.ActivityVideoList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoMusicList.ActivityVideoMusicList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoGIF.ActivityVideoList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoJoiner.ActivityVideoList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCollage.ActivityCollageAlbumList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityMusicList.ActivityMusicList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityPhotoVideo.ActivitySelectImageAndVideo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCutter.ActivityVideoCutter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCompressor.ActivityVideoCompressor"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoToAudio.ActivityVideoToAudio"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.UtilsAndAdapters.EditorAudioPlayer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityAudioVideoMixer.ActivityAudioVideoMixer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.UtilsAndAdapters.EditorSelectMusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.UtilsAndAdapters.EditorVideoPlayer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoMute.ActivityVideoMute"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityPhotoVideo.TablayoutSlideshow.HomeTab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityPhotoVideo.ActivityDisplayAlbum"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityPhotoVideo.ActivitySelectionList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityPhotoVideo.ActivityMovieMaker"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCropper.ActivityVideoCropper"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityFastMotion.ActivityFastMotion"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivitySlowmotion.ActivitySlowMotionVideo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoReverse.ActivityVideoReverse"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCollage.ActivitySelectFrame"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCollage.ActivityVideoCropAndCut"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCollage.ActivitySelectSticker"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoSplit.ActivityVideoSplitter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoRotate.ActivityVideoRotate"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoConverter.ActivityVideoConverter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoJoiner.ActivityGalleryList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoJoiner.ActivityGalleryPhotos"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoJoiner.ActivityVideoJoiner"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoJoiner.ActivityAddAudio"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoGIF.ActivityVideoToGIF"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoGIF.ActivityGIFPreview"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoMirror.ActivityVideoMirror"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityAudioCompress.ActivityAudioCompressor"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityAudioJoiner.ActivityAudioJoiner"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".videowatermark.VideoWatermarkActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoToImage.ActivityVideoToImage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.video_editor.photoeditorapp1.ActivityVideoCollage.ActivitySelectMusic"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id_admob" />
+    </application>
+
+</manifest>
